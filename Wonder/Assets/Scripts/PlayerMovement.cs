@@ -6,7 +6,6 @@ public class PlayerMovement : MonoBehaviour
     public AudioSource footstepSource;
     public float movementSpeed;
     public float sprintSpeed;
-    public bool canMove = true;
     private float dist;
 
     private void Update()

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Rendering.PostProcessing;
@@ -5,13 +6,14 @@ using UnityEngine.Rendering.PostProcessing;
 public class PostProcessing : MonoBehaviour
 {
     public PostProcessVolume pp;
-    public Transform player;
+    public GameObject player;
 
     private void Start()
     {
         StartCoroutine(LerpVignetteSlowTime(3, 5));
-        StartCoroutine(ZoomTo(player.position));
+        StartCoroutine(FakeSloMo(3.5f, 3));
     }
+
 
     IEnumerator LerpVignetteSlowTime(float delay, float newVignette)
     {
@@ -22,15 +24,15 @@ public class PostProcessing : MonoBehaviour
         {
             yield return null;
             vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, 0.7f, Time.deltaTime * newVignette);
+            print("lerping");
         }
     }
 
-    IEnumerator ZoomTo(Vector3 endPoint)
+    IEnumerator FakeSloMo(float delay, float amount)
     {
-        while (Vector3.Distance(transform.position, endPoint) > 0.5)
-        {
-            yield return null;
-            transform.position = Vector3.Lerp(transform.position, endPoint, Time.deltaTime);
-        }
+        yield return new WaitForSeconds(delay);
+        var playerMovement = player.GetComponent<PlayerMovement>();
+        playerMovement.movementSpeed /= amount;
+        playerMovement.sprintSpeed /= amount;
     }
 }

@@ -316,7 +316,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_Sprite: {fileID: 21300000, guid: e544213020e428843ae714f256a7ce5f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -518,7 +518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pp: {fileID: 1700123352}
-  player: {fileID: 0}
+  player: {fileID: 866970809}
 --- !u!1 &2051557203
 GameObject:
   m_ObjectHideFlags: 0
