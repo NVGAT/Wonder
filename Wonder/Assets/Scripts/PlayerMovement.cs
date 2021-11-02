@@ -7,6 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float movementSpeed;
     public float sprintSpeed;
     private float dist;
+    public bool playSound = true;
 
     private void Update()
     {
@@ -15,25 +16,31 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetKey(KeyCode.LeftShift))
             {
                 rb.velocity = input * sprintSpeed;
-                if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.x) > 0)
+                if (playSound)
                 {
-                    footstepSource.Play();
-                }
-                else if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.y) > 0)
-                {
-                    footstepSource.Play();
+                    if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.x) > 0)
+                    {
+                        footstepSource.Play();
+                    }
+                    else if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.y) > 0)
+                    {
+                        footstepSource.Play();
+                    }
                 }
             }
             else
             {
                 rb.velocity = input * movementSpeed;
-                if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.x) > 0)
+                if (playSound)
                 {
-                    footstepSource.Play();
-                }
-                else if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.y) > 0)
-                {
-                    footstepSource.Play();
+                    if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.x) > 0)
+                    {
+                        footstepSource.Play();
+                    }
+                    else if (!footstepSource.isPlaying && Mathf.Abs(rb.velocity.y) > 0)
+                    {
+                        footstepSource.Play();
+                    }
                 }
             }
     }
