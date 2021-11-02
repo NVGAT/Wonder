@@ -347,7 +347,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: August se nakon nekoliko tjedana u skoli najvise druzio sa Jackom Willom
-    i Summer, sve dok je sve nije promijenilo.
+    i Summer, sve dok se sve nije promijenilo.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13abc57406025b3479d0ccd90194e018, type: 2}
   m_sharedMaterial: {fileID: -708783520164998749, guid: 13abc57406025b3479d0ccd90194e018, type: 2}
@@ -454,7 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionTime: 10
-  sceneToLoad: Scene4
+  sceneToLoad: Scene5
 --- !u!4 &1268152841
 Transform:
   m_ObjectHideFlags: 0

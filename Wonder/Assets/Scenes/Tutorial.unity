@@ -402,7 +402,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: Bok! U ovoj videoigri igrate kao glavni lik nase lektire, August Pullman.
     Nadam se da ste procitali kontrole! Igra ce vam reci kada trebate pritisnuti
-    neke gumbove. Ovaj projekt bi trebao ukratko predociti knjigu Cudo or R.J. Palacia.
+    neke gumbove. Ovaj projekt bi trebao ukratko predociti knjigu Cudo od R.J. Palacia.
     Zabavite se!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 13abc57406025b3479d0ccd90194e018, type: 2}

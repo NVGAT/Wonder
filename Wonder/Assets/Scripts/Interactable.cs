@@ -38,8 +38,9 @@ public class Interactable : MonoBehaviour
 
     void Scene1MomTalk()
     {
-        textBubble.ElementAt(0).gameObject.SetActive(true);
         DeactivateInteractable();
+        StartCoroutine(TextRoutine(0, 0));
+        StartCoroutine(TransitionWait(13, "Transition1"));
     }
 
     void Scene2()
