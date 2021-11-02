@@ -15,7 +15,7 @@ public class PostProcessing : MonoBehaviour
         StartCoroutine(LerpVignetteSlowTime(3, 5));
         StartCoroutine(FakeSloMo(3.5f, 3));
         StartCoroutine(TextRoutine(4, 0));
-        StartCoroutine(Transition(10, "Transition6"));
+        StartCoroutine(Transition(18, "Transition6"));
     }
 
 
@@ -28,7 +28,6 @@ public class PostProcessing : MonoBehaviour
         {
             yield return null;
             vignette.intensity.value = Mathf.Lerp(vignette.intensity.value, 0.7f, Time.deltaTime * newVignette);
-            print("lerping");
         }
     }
 
